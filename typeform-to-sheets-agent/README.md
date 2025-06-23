@@ -154,6 +154,40 @@ typeform-to-sheets-agent/
 | `NODE_ENV` | Não | Ambiente de execução (development/production) |
 | `LOG_LEVEL` | Não | Nível de log (error, warn, info, debug) |
 
+## CI/CD com GitHub Actions
+
+O projeto inclui um fluxo de CI/CD configurado com GitHub Actions que:
+
+1. **Testes**: Executa os testes automatizados em cada push e pull request
+2. **Build e Push da Imagem Docker**: Cria e envia a imagem para o Docker Hub em cada push para a branch main
+3. **Deploy**: (Configurável) Pode ser configurado para fazer deploy automático
+
+### Configuração necessária
+
+1. **Secrets do repositório** (Configuração > Secrets > Actions):
+   - `DOCKERHUB_USERNAME`: Seu nome de usuário do Docker Hub
+   - `DOCKERHUB_TOKEN`: Seu token de acesso ao Docker Hub
+   - `KUBE_CONFIG`: (Opcional) Configuração do Kubernetes para deploy
+
+2. **Workflows**
+   - `.github/workflows/ci-cd.yml`: Define o pipeline de CI/CD
+
+### Fluxo do Pipeline
+
+1. **Testes**:
+   - Instala as dependências
+   - Executa os testes unitários e de integração
+   - Verifica a qualidade do código
+
+2. **Build e Push**:
+   - Constrói a imagem Docker
+   - Envia para o Docker Hub com a tag `latest`
+   - Utiliza cache para builds mais rápidos
+
+3. **Deploy**:
+   - (Configurável) Pode ser configurado para fazer deploy em Kubernetes
+   - Atualiza a aplicação em produção automaticamente
+
 ## Solução de Problemas
 
 ### Erros comuns
