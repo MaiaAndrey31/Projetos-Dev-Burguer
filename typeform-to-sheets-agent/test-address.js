@@ -170,9 +170,11 @@ function testAddress(testName, answers) {
 }
 
 // Executar os testes
-if (require.main === module) {
+if (process.argv[1] === new URL(import.meta.url).pathname) {
     console.log('Iniciando testes de processamento de endereço...\n');
     testAddressProcessing()
-        .then(() => console.log('\n✅ Testes concluídos!'))
-        .catch(err => console.error('❌ Erro nos testes:', err));
+        .then(() => console.log('\nTodos os testes foram concluídos com sucesso!'))
+        .catch(console.error);
 }
+
+export { testAddress, testAddressProcessing };

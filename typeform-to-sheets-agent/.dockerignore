@@ -1,15 +1,306 @@
-node_modules
-npm-debug.log
+# Dependências
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Ambiente
 .env
-.git
+.env.*
+!.env.example
+
+# Controle de versão
+.git/
 .gitignore
-.vscode
+.gitattributes
+.gitmodules
+.hg
+.svn
+
+# IDEs e editores
+.vscode/
+.idea/
+*.sublime-*
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+*.swp
+*.swo
+.DS_Store
+
+# Documentação
 *.md
 *.pdf
 *.docx
 *.xlsx
 *.csv
+*.odt
+*.txt
+*.rtf
+
+# Arquivos de sistema
 .DS_Store
-.idea
+Thumbs.db
+desktop.ini
+
+# Arquivos sensíveis
 *.pem
 *.key
+*.crt
+*.cert
+*.p12
+*.pfx
+*.p7b
+*.cer
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build
+dist/
+build/
+coverage/
+.next/
+.nuxt/
+.nuxt-
+.nuxt-prod
+.nuxt-dev
+
+# Testes
+__tests__/
+__mocks__/
+*.test.js
+*.spec.js
+*.e2e.js
+*.test.ts
+*.spec.ts
+*.e2e.ts
+coverage/
+.nyc_output/
+
+# Configurações locais
+.local-*
+*.local
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+docker-compose.*.yml
+!.docker-compose.yml
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+.circleci/
+.husky/
+
+# Cache e temporários
+.cache/
+.tmp/
+.temp/
+.vercel/
+.netlify/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Arquivos específicos do projeto
+coverage/
+.nyc_output/
+.nycrc
+.nycrc.json
+
+# Arquivos de configuração de ferramentas
+.eslintcache
+.stylelintcache
+.prettierignore
+.prettierrc
+.editorconfig
+.tern-project
+.tern-port
+.tern-config
+.tern-module*
+
+# Arquivos de configuração de IDEs
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Arquivos de configuração do Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Arquivos de configuração do macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Arquivos de configuração do Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Arquivos de configuração de editores
+*~
+*.swp
+*.swo
+*#
+.idea/
+.vscode/
+*.sublime-*
+
+# Arquivos de configuração de IDEs
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Docker
+.dockerignore
+Dockerfile*
+docker-compose*
+.docker
+
+# Arquivos de configuração do projeto
+.env
+.env.*
+!.env.example
+
+# Arquivos de configuração do Node.js
+.npmrc
+.npmignore
+.prettierrc
+.prettierignore
+.editorconfig
+.eslintrc*
+.eslintignore
+.stylelintrc*
+.stylelintignore
+.jshintrc
+.jscsrc
+.jshintignore
+.tern-project
+.tern-port
+.tern-config
+.tern-module*
+
+# Arquivos de configuração de testes
+.nycrc
+.nycrc.json
+.nyc_output/
+coverage/
+
+# Arquivos de configuração de build
+.next/
+.nuxt/
+.nuxt-
+.nuxt-prod
+.nuxt-dev
+
+# Arquivos de configuração de IDEs
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Arquivos de configuração do Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Arquivos de configuração do macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Arquivos de configuração do Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Arquivos de configuração de editores
+*~
+*.swp
+*.swo
+*#
+.idea/
+.vscode/
+*.sublime-*
+
+# Arquivos de configuração de IDEs
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Docker
+.dockerignore
+Dockerfile*
+docker-compose*
+.docker
+
+# Arquivos de configuração do projeto
+.env
+.env.*
+!.env.example
+
+# Arquivos de configuração do Node.js
+.npmrc
+.npmignore
+.prettierrc
+.prettierignore
+.editorconfig
+.eslintrc*
+.eslintignore
+.stylelintrc*
+.stylelintignore
+.jshintrc
+.jscsrc
+.jshintignore
+.tern-project
+.tern-port
+.tern-config
+.tern-module*
+
+# Arquivos de configuração de testes
+.nycrc
+.nycrc.json
+.nyc_output/
+coverage/
+
+# Arquivos de configuração de build
+.next/
+.nuxt/
+.nuxt-
+.nuxt-prod
+.nuxt-dev

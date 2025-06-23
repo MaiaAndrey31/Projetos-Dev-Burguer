@@ -1,5 +1,7 @@
-require('dotenv').config();
-const axios = require('axios');
+import dotenv from 'dotenv';
+import axios from 'axios';
+
+dotenv.config();
 
 // Dados de exemplo que simulam um envio do Typeform
 const testData = {
@@ -157,8 +159,8 @@ async function testWebhook() {
 }
 
 // Executar o teste
-if (require.main === module) {
+if (process.argv[1] === new URL(import.meta.url).pathname) {
     testWebhook();
 }
 
-module.exports = testWebhook;
+export default testWebhook;

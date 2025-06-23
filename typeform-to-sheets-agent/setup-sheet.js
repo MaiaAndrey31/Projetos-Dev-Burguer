@@ -1,5 +1,7 @@
-require('dotenv').config();
-const { google } = require('googleapis');
+import dotenv from 'dotenv';
+import { google } from 'googleapis';
+
+dotenv.config();
 
 async function setupGoogleSheet() {
     try {
@@ -160,4 +162,6 @@ async function setupGoogleSheet() {
 }
 
 // Run the setup
-setupGoogleSheet();
+if (process.argv[1] === new URL(import.meta.url).pathname) {
+  setupGoogleSheet().catch(console.error);
+}

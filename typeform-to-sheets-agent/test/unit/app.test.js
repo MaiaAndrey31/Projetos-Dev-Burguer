@@ -1,4 +1,4 @@
-const { formatName } = require('../../src/utils/helpers');
+import { formatName } from '../../src/utils/helpers.js';
 
 describe('Formatação de Nomes', () => {
   test('Deve formatar nome completo corretamente', () => {

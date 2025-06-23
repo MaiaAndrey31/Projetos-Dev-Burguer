@@ -3,7 +3,7 @@
  * @param {string} name - O nome a ser formatado
  * @returns {string} O nome formatado
  */
-function formatName(name = '') {
+export function formatName(name = '') {
   if (!name || typeof name !== 'string') return '';
   
   return name
@@ -18,7 +18,7 @@ function formatName(name = '') {
  * @param {string} cpf - O CPF a ser validado
  * @returns {boolean} Se o formato do CPF é válido
  */
-function validateCPF(cpf = '') {
+export function validateCPF(cpf = '') {
   if (!cpf) return false;
   
   // Remove caracteres não numéricos
@@ -66,7 +66,3 @@ function validateCPF(cpf = '') {
   return true;
 }
 
-module.exports = {
-  formatName,
-  validateCPF
-};
