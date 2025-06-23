@@ -1,0 +1,36 @@
+services:
+  app:
+    build: .
+    container_name: typeform-agent
+    restart: unless-stopped
+    ports:
+      - "${PORT:-3000}:3000"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/usr/src/app/data
+      - ./logs:/usr/src/app/logs
+      - ./src:/usr/src/app/src
+      - ./package.json:/usr/src/app/package.json
+      - ./package-lock.json:/usr/src/app/package-lock.json
+      - ./credentials.json:/usr/src/app/credentials.json
+      - ./.env:/usr/src/app/.env
+    environment:
+      - NODE_ENV=${NODE_ENV:-production}
+      - TZ=${TZ:-America/Sao_Paulo}
+      - PORT=3000
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  data:
+  logs:

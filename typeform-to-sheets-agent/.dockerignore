@@ -1,0 +1,15 @@
+node_modules
+npm-debug.log
+.env
+.git
+.gitignore
+.vscode
+*.md
+*.pdf
+*.docx
+*.xlsx
+*.csv
+.DS_Store
+.idea
+*.pem
+*.key
